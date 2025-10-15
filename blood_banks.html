@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بنوك الدم القريبة</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS إضافي لعرض النتائج بشكل مرتب */
+        .results-container {
+            padding: 50px 5%;
+            min-height: 500px;
+        }
+        .bank-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .bank-details h3 {
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+        .bank-details p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .bank-details span.distance {
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-right: 15px;
+        }
+        /* لتنظيم بطاقات البنوك في شبكة على الشاشات الكبيرة */
+        .bank-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">مُتبرع</div>
+        <nav>
+            <a href="index.html">الرئيسية</a>
+        </nav>
+        <div class="auth-buttons">
+            <button class="btn primary">تسجيل الدخول</button>
+        </div>
+    </header>
+
+    <section class="results-container">
+        <h1>نتائج البحث: بنوك الدم القريبة</h1>
+        <p class="search-summary">تم العثور على 5 بنوك دم ضمن نطاق 10 كم توفر فصيلة A+.</p>
+
+        <div class="bank-list" id="banks-results">
+            <div class="bank-card">
+                <div class="bank-details">
+                    <h3>مستشفى جامعة القاهرة التخصصي</h3>
+                    <p>العنوان: شارع القصر العيني، القاهرة</p>
+                    <p>رقم الاتصال: 02XXXXXXX</p>
+                </div>
+                <div class="bank-actions">
+                    <span class="distance">4.5 كم</span>
+                    <button class="btn primary">عرض الموقع على الخريطة</button>
+                </div>
+            </div>
+
+             <div class="bank-card">
+                <div class="bank-details">
+                    <h3>المركز الإقليمي لنقل الدم</h3>
+                    <p>العنوان: بالقرب من ميدان التحرير، القاهرة</p>
+                    <p>رقم الاتصال: 02XXXXXXX</p>
+                </div>
+                <div class="bank-actions">
+                    <span class="distance">7.1 كم</span>
+                    <button class="btn primary">عرض الموقع على الخريطة</button>
+                </div>
+            </div>
+            
+            </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 مُتبرع. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script src="blood_banks.js"></script> 
+</body>
+</html>

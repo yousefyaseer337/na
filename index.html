@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مُتبرع - نظام التبرع بالدم</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">مُتبرع</div>
+        <nav>
+            <a href="#about">لماذا نتبرع؟</a>
+            <a href="blood_banks.html">بنوك الدم</a>
+            <a href="#contact">اتصل بنا</a>
+        </nav>
+        <div class="auth-buttons">
+            <button class="btn primary">تسجيل الدخول</button>
+            <button class="btn secondary"><a href="register.html"> سجل الآن كمتبرع </a></button>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>تبرع بدمك... وأنقذ حياة</h1>
+            <p>نظام مُتبرع يربط المتبرعين المسجلين بأقرب بنوك الدم ومراكز الطوارئ في مصر.</p>
+            <div class="cta-actions">
+                <button class="btn large primary">أبحث عن بنك دم قريب</button>
+                <button class="btn large secondary">سجل كمركز طبي</button>
+            </div>
+        </div>
+    </section>
+    <section class="search-section" id="blood-banks">
+        <h2>ابحث حسب فصيلة الدم</h2>
+        <div class="search-container">
+            <select name="blood-type" id="blood-type">
+                <option value="">اختر فصيلة الدم</option>
+                <option value="A+">A+</option>
+                <option value="B+">B+</option>
+                <option value="O+">O+</option>
+                <option value="AB+">AB+</option>
+                </select>
+            <button class="btn primary">بحث</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 مُتبرع. جميع الحقوق محفوظة.</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

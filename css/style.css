@@ -1,0 +1,197 @@
+/* 1. إعادة تعيين الإعدادات الأساسية (Reset & Base Styles) */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', sans-serif; /* استخدام خط عربي */
+}
+
+:root {
+    /* تعريف الألوان الأساسية للمشروع */
+    --primary-color: #E74C3C; /* لون أحمر للتبرع/الطوارئ */
+    --secondary-color: #2C3E50; /* لون ثانوي داكن */
+    --background-light: #F8F9FA;
+    --text-color: #333;
+    --white: #fff;
+}
+
+body {
+    background-color: var(--background-light);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* 2. تصميم رأس الصفحة (Header) */
+header {
+    background-color: var(--white);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+nav a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+/* 3. تصميم الأزرار (Buttons) */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+}
+
+.btn.primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.btn.primary:hover {
+    background-color: #C0392B; /* لون أغمق عند التمرير */
+}
+
+.btn.secondary {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 8px 18px;
+}
+
+.btn.secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.btn.large {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    margin-top: 15px;
+}
+
+/* 4. قسم البطل (Hero Section) */
+.hero-section {
+    background: url('hero-bg.jpg') no-repeat center center/cover; /* يمكنك إضافة صورة خلفية ذات صلة بالدم */
+    background-color: #f7cac9; /* لون بديل */
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 100px 20px;
+    min-height: 400px;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* 5. قسم البحث السريع */
+.search-section {
+    padding: 50px 5%;
+    text-align: center;
+    background-color: var(--white);
+}
+
+.search-section h2 {
+    margin-bottom: 25px;
+    color: var(--primary-color);
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.search-container select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex-grow: 1;
+    font-size: 1rem;
+}
+
+/* 6. تذييل الصفحة (Footer) */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* 7. التجاوبية (Media Queries) - لضبط التصميم على الهواتف والأجهزة الصغيرة */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        margin-top: 10px;
+        order: 3; /* نقل قائمة التنقل إلى الأسفل في الشاشات الصغيرة */
+        width: 100%;
+        text-align: center;
+    }
+
+    nav a {
+        margin: 5px 10px;
+        display: inline-block;
+    }
+
+    .auth-buttons {
+        margin-top: 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .cta-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn.large {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .search-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
